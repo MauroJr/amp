@@ -30,7 +30,7 @@ function encode(args) {
   const buf = Buffer.alloc(len);
 
   // pack meta
-  buf[off++] = (VERSION << 4) | argc;
+  buf[off += 1] = (VERSION << 4) | argc;
 
   // pack args
   for (i = 0; i < argc; i += 1) {
